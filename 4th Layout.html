@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COUNTRY Inn</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link
+    rel="icon"
+    type="image/png"
+    href="C:\Users\hp\Documents\Html practice\favicon_io\android-chrome-192x192.png"
+  />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            list-style-type: none;
+            box-sizing: border-box;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .supreme {
+            width: 100%;
+            height: 850px;
+            background-image: url(realbg.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        #navbar {
+            height: 75px;
+            width: 94%;
+            margin: auto;
+            background-color: rgba(0, 0, 0, 0.3);
+            position: fixed;
+            top: 10px;
+            left: 3%;
+            border-radius: 32px;
+            border-bottom: 3px solid black;
+            z-index: 1;
+        }
+
+        .navlist {
+            display: flex;
+        }
+
+        #logo {
+            width: 60px;
+            height: 60px;
+            margin: 5px;
+            margin-left: 15px;
+            margin-right: 10px;
+            border: 2px solid black;
+            border-radius: 50%;
+        }
+
+        #tof {
+            font-size: 32px;
+            color: black;
+            text-shadow: 7px 7px 15px white;
+            font-family: montserrat;
+            line-height: 70px;
+        }
+
+        .fixedele {
+            height: 70px;
+            width: 180px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border: 2px solid white;
+            border-radius: 20px;
+            position: fixed;
+            top: 315px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            z-index: 1;
+            transition: height 1.4s, width 2s;
+            
+        }
+
+        .fixedele:hover {
+            height: 80px;
+            width: 250px;
+        }
+
+        .fixedele p {
+            font-family: arial;
+            font-weight: bold;
+            font-size: 25px;
+            color: white;
+            margin: auto;
+            padding: 6px;
+        }
+
+        .fixedele a {
+            color: white;
+            display: block;
+            text-align: center;
+        }
+
+        .actualnavitems {
+            display: flex;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+            width: 650px;
+            justify-content: center;
+            align-items: center;
+            margin-left: 280px;
+            height: 73px;
+        }
+
+        .actualnavitems li {
+            display: block;
+            margin-left: 15px;
+            padding: 5px;
+            width: 140px;
+            font-size: 21px;
+            font-family: arial;
+            text-align: center;
+            line-height: 50px;
+            height: 60px;
+
+        }
+
+        .actualnavitems li a {
+            display: block;
+            width: 140px;
+            height: 35px;
+            color: white;
+            height: 60px;
+        }
+
+        .actualnavitems li:hover {
+            border-bottom: 3px solid white;
+        }
+
+        .supmiddle {
+            border: 3px solid black;
+            border-radius: 55px;
+            background-color: rgba(163, 0, 16, 0.3);
+            width: 550px;
+            height: 180px;
+            position: absolute;
+            top: 260px;
+            left: 550px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: one;
+            animation-timing-function: ease;
+            animation-duration: 32s;
+            animation-iteration-count: infinite;
+            animation-name: mani;
+            animation-timing-function: ease-in-out;
+            animation-duration: 16s;
+            animation-iteration-count: infinite;
+        }
+
+        #supmiddlecontent {
+            font-size: 60px;
+            color: black;
+            text-align: center;
+            font-family: Times New Roman;
+        }
+        @keyframes mani {
+            0% {
+                background-color: rgba(168, 13, 39, 0.4);
+                border: 3px solid black;
+                border-radius: 55px;
+            }
+            50% {
+                background-color: rgba(59, 108, 255, 0.4);
+                border: 3px solid black;
+                border-radius: 55px;
+            }
+        }
+
+
+            .roomsmain {
+                height: 600px;
+                border-top: 3px solid black;
+            }
+
+            .hoc {
+                height: 90px;
+                background-color: rgba(168, 13, 39, 0.6);
+                border-bottom-left-radius: 30px;
+                border-bottom-right-radius: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .hocactual {
+                margin: auto;
+                width: 420px;
+                height: 70px;
+                background-color: white;
+            }
+
+            .dh {
+                text-align: center;
+                font-size: 44px;
+                font-family: montserrat;
+                line-height: 70px;
+            }
+
+            .headinganimate {
+                margin: auto;
+                width: 420px;
+                height: 70px;
+                background-color: white;
+                animation-name: mannat3;
+                animation-timing-function: ease;
+                animation-iteration-count: infinite;
+                animation-duration: 2s;
+                box-sizing: unset;
+                background-color: rgba(168, 13, 39, 0.6);
+            }
+
+            @keyframes mannat3 {
+                0% {
+                    border: none;
+                    border-left: 3px solid black;
+                }
+
+                25% {
+                    border: none;
+                    border-bottom: 3px solid black;
+                }
+
+                50% {
+                    border: none;
+                    border-right: 3px solid black;
+                }
+
+                75% {
+                    border: none;
+                    border-top: 3px solid black;
+                }
+            }
+
+            .flex {
+                display: flex;
+                height: 550px;
+                justify-content: space-around;
+                align-items: center;
+            }
+
+            .leftcontent {
+                width: 65%;
+                height: 550px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .leftcontentcover {
+                width: 90%;
+                border: 3px solid black;
+                height: 480px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .leftactualcontent {
+                background-image: url(room1.jpg);
+                border-radius: 15px;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                width: 98%;
+                height: 460px;
+                animation-name: mannat2;
+                animation-timing-function: ease;
+                animation-iteration-count: infinite;
+                animation-duration: 24s;
+            }
+
+            @keyframes mannat2 {
+                0% {
+                    background-image: url(room1.jpg);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: cover;
+                    border-radius: 15px;
+                }
+
+                33% {
+                    background-image: url(room2.jpg);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: cover;
+                    border-radius: 15px;
+                }
+
+                66% {
+                    background-image: url(room3.jpeg);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: cover;
+                    border-radius: 15px;
+                }
+            }
+
+            .rightcontent {
+                width: 30%;
+                height: 480px;
+                display: flex;
+                align-items: center;
+                background-color: rgba(59, 108, 255, 0.3);
+                border-radius: 25px;
+                position: relative;
+            }
+
+            .para {
+                color: black;
+                font-family: arial;
+                font-size: 23px;
+                text-align: justify;
+                margin: 10px;
+                padding: 18px;
+                border: 2px solid white;
+                background-color: rgba(0, 0, 0, 0.8);
+                color: white;
+            }
+
+            .resanimate {
+                background-image: url(res1.jpg);
+                border-radius: 15px;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                width: 98%;
+                height: 460px;
+                animation-name: mannat10;
+                animation-timing-function: ease;
+                animation-iteration-count: infinite;
+                animation-duration: 24s;
+            }
+
+            @keyframes mannat10 {
+                0% {
+                    background-image: url(res1.jpg);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: cover;
+                    border-radius: 15px;
+                }
+
+                33% {
+                    background-image: url(res2.jpg);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: cover;
+                    border-radius: 15px;
+                }
+
+                66% {
+                    background-image: url(res3.jpg);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: cover;
+                    border-radius: 15px;
+                }
+            }
+
+            .rightcontent img {
+                height: 60px;
+                width: 60px;
+                border: 2px solid white;
+                border-radius: 50%;
+                position: absolute;
+                right: 15px;
+                bottom: 15px;
+            }
+
+            .banquetcontainer {
+                position: relative;
+                top: 40px;
+            }
+
+            .banquetanimate {
+                background-image: url(bh1.jpg);
+                border-radius: 15px;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                width: 98%;
+                height: 460px;
+                animation-name: mannat11;
+                animation-timing-function: ease;
+                animation-iteration-count: infinite;
+                animation-duration: 24s;
+            }
+
+            @keyframes mannat11 {
+                0% {
+                    background-image: url(bh1.jpg);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: cover;
+                    border-radius: 15px;
+                }
+
+                33% {
+                    background-image: url(bh3.jpg);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: cover;
+                    border-radius: 15px;
+                }
+
+                66% {
+                    background-image: url(bh4.jpeg);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: cover;
+                    border-radius: 15px;
+                }
+            }
+
+            .restcontainer {
+                margin-top: 40px;
+            }
+
+            .banquetcontainer {
+                margin-top: 40px;
+            }
+
+            .spacontainer {
+                position: relative;
+                top: 40px;
+            }
+
+            .spaanimate {
+                background-image: url(sw2.jpg);
+                border-radius: 15px;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                width: 98%;
+                height: 460px;
+                animation-name: mannat12;
+                animation-timing-function: ease;
+                animation-iteration-count: infinite;
+                animation-duration: 24s;
+            }
+
+            @keyframes mannat12 {
+                0% {
+                    background-image: url(sw2.jpg);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: cover;
+                    border-radius: 15px;
+                }
+
+                33% {
+                    background-image: url(sw1.jpg);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: cover;
+                    border-radius: 15px;
+                }
+
+                66% {
+                    background-image: url(swthree.jpg);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: cover;
+                    border-radius: 15px;
+                }
+            }
+
+            .submenu {
+                display: none;
+                margin-top: 8px;
+                margin-left: 75px;
+            }
+
+            .submenu li {
+                display: block;
+                width: 280px;
+                background-color: rgba(168, 13, 39, 0.4);
+                color: black;
+                border: 2px solid black;
+                padding: 2px 5px;
+                margin: 2px;
+                font-size: 20px;
+                font-family: arial;
+                text-align: left;
+                font-weight: bold;
+            }
+
+            .submenu a {
+                color: black;
+            }
+
+            .submenu li:hover {
+                background-color: rgba(59, 108, 255, 0.4);
+            }
+
+            .fixedele:hover .submenu{
+                display: block;
+            }
+
+            #footer {
+                position: relative;
+                top: 75px;
+                display: flex;
+                justify-content: space-around;
+                height: 218px;
+                width: 80%;
+                margin: auto;
+                background-color: rgba(168, 13, 39, 0.7);
+                border-top-left-radius: 35px;
+                border-top-right-radius: 35px;
+                border-top: 3px solid black;
+                margin-bottom: 10px;
+            }
+
+            .aboutus {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 217px;
+                width: 38%;
+            }
+
+            .footerfl li {
+                display: block;
+                width: 270px;
+                height: 28px;
+                margin-top: 15px;
+                font-size: 20px;
+                font-family: arial;
+                padding: 5px;
+                line-height: 17px;
+                text-align: center;
+                background-color: rgba(255, 255, 255, 0.3);
+                border-radius: 10px;
+                border: 1px solid black;
+            }
+
+            .footerfl li a {
+                color: black;
+                font-family: arial;
+                display: block;
+                width: 270px;
+                height: 23px;
+            }
+
+            .noc {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 217px;
+                width: 38%;
+            }
+
+            .noc img {
+                height: 140px;
+                width: 250px;
+            }
+
+            .noc h5 {
+                font-size: 28px;
+                text-align: center;
+            }
+
+            .noc p {
+                font-size: 18px;
+                color: black;
+                text-align: center;
+                font-family: arial;
+            }
+
+            .entiresearch {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                top: 610px;
+                width: 700px;
+                margin: auto;
+            }
+
+            .entiresearch input {
+                font-size: 25px;
+                background-color: rgba(255, 255, 255, 0.4);
+                border: none;
+                outline: none;
+                width: 0px;
+                height: 42px;
+                border-radius: 38px;
+                border: 2px solid black;
+                transform: translateX(30px);
+                transition-duration: 1.8s;
+            }
+
+            ::placeholder {
+                color: black;
+            }
+
+            .entiresearch span {
+                position: relative;
+                left: 13px;
+                line-height: 50px;
+                color: white;
+            }
+
+            .iconpg {
+                font-size: 27px;
+                border-radius: 50%;
+                width: 50px;
+                height: 50px;
+                background-color: black;
+                z-index: 1;
+                cursor: pointer;
+            }
+
+            .entiresearch:hover input{
+                width: 650px;
+            }
+
+            input:focus {
+                background-color: rgba(168, 13, 39, 0.3);
+                color: white;
+            }
+
+            .rotate:hover {
+                background-color: rgba(59, 108, 255, 0.4);
+            }
+
+            .rotate {
+                display: block;
+                position: absolute;
+                right: -35px;
+                bottom: 35px;
+                width: 120px;
+                border-top-left-radius: 30px;
+                border-bottom-left-radius: 30px;
+                transform: rotate(90deg);
+                height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: rgba(0, 0, 0);
+                color: white;
+            }
+
+            .rotate a {
+                color: white;
+                font-size: 25px;
+                font-family: montserrat;
+                display: block;
+                line-height: 40px;
+                width: 110px;
+                text-align: center;
+                height: 40px;
+            }
+
+            .aulitem:hover {
+                background-color:  rgba(59, 108, 255, 0.4);
+            }
+          
+
+   </style>
+</head>
+
+<body>
+    <div id="lb" class="supreme">
+        <header id="navbar">
+            <ul class="navlist">
+                <li><img src="logo.jpg" alt="logo" id="logo" </img></li>
+                <li>
+                    <h3 id="tof">COUNTRY Inn & Suites</h3>
+                </li>
+                <div class="actualnavitems">
+                    <li id="firstnavitem"><a href>Packages<span class="material-icons">luggage</span></a></li>
+                    <li><a href>Maps<span class="material-icons">place</span></a></li>
+                    <li><a href>Bookings<span class="material-icons">menu_book</span></a></li>
+                    <li><a href>Contact us<span class="material-icons">phone</span></a></li>
+                </div>
+            </ul>
+        </header>
+        <div class="entiresearch">
+            <input type="search" class="input" placeholder="Search for Hotels, Destinations, Restaurant & more..."</input>
+            <div class="iconpg">
+                <li><span class="material-icons">search</span</li>
+            </div>
+        </div>
+        <div class="fixedele">
+            <p><a href="#">Make a Booking now</a></p>
+               <ul class="submenu">
+                   <li><a href="#">Book a room</a></li>
+                   <li><a href="#">Book banquet</a></li>
+                   <li><a href="#">Reservation in restaurant</a></li>
+               </ul>
+        </div>
+        <div class="supmiddle">
+            <h3 id="supmiddlecontent">Royal Residence To <br>Your Expectations</h3>
+        </div>
+    </div>
+
+    <div class="roomsmain">
+        <div class="hoc">
+            <div class="hocactual headinganimate">
+                <h3 class="dh">Rooms</h3>
+            </div>
+        </div>
+        <div class="flex">
+            <div class="leftcontent">
+                <div class="leftcontentcover">
+                    <div class="leftactualcontent"></div>
+                </div>
+            </div>
+            <div class="rightcontent">
+                <img src="logo2.jpg" alt="logo" </img>
+                <div class="rightactualcontent">
+                    <p class="para">Contemporary rooms, designed to suit the requirements of every traveler. All the
+                        rooms are equipped with modern amenities.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="roomsmain restcontainer">
+        <div class="hoc">
+            <div class="hocactual headinganimate">
+                <h3 class="dh">Restaurant</h3>
+            </div>
+        </div>
+        <div class="flex">
+            <div class="rightcontent">
+                <img src="logo2.jpg" alt="logo" </img>
+                <div class="rightactualcontent">
+                    <p class="para">Delectable dining options that will tempt your taste buds. Guests can savor their
+                        favorite food while availing the 24x7 in-room dining facility.</p>
+                </div>
+            </div>
+            <div class="leftcontent">
+                <div class="leftcontentcover">
+                    <div class="resanimate"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="roomsmain banquetcontainer">
+        <div class="hoc">
+            <div class="hocactual headinganimate">
+                <h3 class="dh">Banquet Hall</h3>
+            </div>
+        </div>
+        <div class="flex">
+            <div class="leftcontent">
+                <div class="leftcontentcover">
+                    <div class="banquetanimate"></div>
+                </div>
+            </div>
+            <div class="rightcontent">
+                <img src="logo2.jpg" alt="logo" </img>
+                <div class="rightactualcontent">
+                    <p class="para">Versatile banqueting and conferencing space and ample parking for all your needs.
+                        The partition in the banquet hall makes it convenient to organize two events at the same time.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="spacontainer roomsmain restcontainer">
+        <div class="hoc">
+            <div class="hocactual headinganimate">
+                <h3 class="dh">Swimming Pool</h3>
+            </div>
+        </div>
+        <div class="flex">
+            <div class="rightcontent">
+                <img src="logo2.jpg" alt="logo" </img>
+                <div class="rightactualcontent">
+                    <p class="para">Get 24 hour swimming pool with incorporate elegant waterfalls,
+                        a contemporary water fountain and relaxing mood lighting.</p>
+                </div>
+            </div>
+            <div class="leftcontent">
+                <div class="leftcontentcover">
+                    <div class="spaanimate"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer">
+        <div class="aboutus">
+            <ul class="footerfl">
+                <li class="aulitem"><a href="#">Write to us via mail</a></li>
+                <li class="aulitem"><a href="#">About us</a></li>
+                <li class="aulitem"><a href="#">Privacy policy</a></li>
+                <li class="aulitem"><a href="#">Terms</a></li>
+            </ul>
+        </div>
+        <div class="noc">
+            <ul class="footernoc">
+                <li class="nocitem"><img src="logo3.png" alt="logo" </img></li>
+                <li class="nocitem"><h5>Country Inn & Suites</h5></li>
+                <li class="nocitem"><p>2020-2021 All Rights Reserved &#169;</p></li>
+            </ul>
+        </div>
+        <div class="rotate">
+            <a href="#lb">Top</a>
+        </div>
+    </footer>
+
+
+
+
+</body>
+
+</html>
